@@ -7,7 +7,7 @@ Description: Plugin for Pressbooks to handle additional shortcodes used by Lumen
 Version: 0.1
 Author: Steel Wagstaff
 Author URI: https://steelwagstaff.info
-License: GPL2
+License: GPL 3.0
 */
 
 add_shortcode( 'reveal-answer', 'revealAnswerShortCodeHandler' );
