@@ -2,9 +2,9 @@
 
 /*
 Plugin Name: Pressbooks Shortcode Handler
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+Plugin URI: https://github.com/SteelWagstaff/pressbooks-shortcode-handler
 Description: Plugin for Pressbooks to handle additional shortcodes used by Lumen Learning.
-Version: 1.0
+Version: 0.1
 Author: Steel Wagstaff
 Author URI: https://steelwagstaff.info
 License: GPL2
