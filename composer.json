@@ -2,7 +2,7 @@
   "name": "steelwagstaff/pressbooks-shortcode-handler",
   "description": "A plugin for Pressbooks which handles additional shortcodes used by Lumen Learning",
   "minimum-stability": "stable",
-  "license": "GPL2",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Steel Wagstaff",
