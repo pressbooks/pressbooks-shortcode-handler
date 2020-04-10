@@ -9,5 +9,8 @@
       "name": "Steel Wagstaff",
       "homepage": "https://github.com/SteelWagstaff"
     }
-  ]
+  ],
+  "require": {
+    "composer/installers": "^1.9"
+  }
 }
