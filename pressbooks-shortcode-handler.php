@@ -2,12 +2,13 @@
 
 /*
 Plugin Name: Pressbooks Shortcode Handler
-Plugin URI: https://github.com/SteelWagstaff/pressbooks-shortcode-handler
+Plugin URI: https://github.com/pressbooks/pressbooks-shortcode-handler
 Description: Plugin for Pressbooks to handle additional shortcodes used by Lumen Learning.
 Version: 1.1.0
-Author: Steel Wagstaff
-Author URI: https://steelwagstaff.info
-License: GPL 3.0
+Author: Pressbooks (Book Oven Inc.)
+Author URI: https://pressbooks.org
+Text Domain: pressbooks-shortcode-handler
+License: GPL v3 or later
 */
 
 add_shortcode( 'reveal-answer', 'revealAnswerShortCodeHandler' );

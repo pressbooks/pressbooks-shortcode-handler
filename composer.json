@@ -2,12 +2,16 @@
   "name": "pressbooks/pressbooks-shortcode-handler",
   "description": "A plugin for Pressbooks which handles additional shortcodes used by Lumen Learning",
   "type": "wordpress-plugin",
-  "minimum-stability": "stable",
   "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/pressbooks/pressbooks-shortcode-handler",
   "authors": [
     {
-      "name": "Steel Wagstaff",
-      "homepage": "https://github.com/SteelWagstaff"
+      "name": "Pressbooks",
+      "homepage": "https://pressbooks.org"
     }
-  ]
+  ],
+  "support": {
+    "email": "code@pressbooks.com",
+    "issues": "https://github.com/pressbooks/pressbooks-shortcode-handler/issues"
+  }
 }
