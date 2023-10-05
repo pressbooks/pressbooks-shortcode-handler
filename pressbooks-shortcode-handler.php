@@ -12,13 +12,13 @@ License: GPL 3.0
 
 add_shortcode( 'reveal-answer', 'revealAnswerShortCodeHandler' );
 add_shortcode( 'hidden-answer', 'hiddenAnswerShortCodeHandler' );
-add_shortcode( 'glossary-page', 'glossary_page_shortcode' );
-add_shortcode( 'glossary-term', 'glossary_term_shortcode' );
-add_shortcode( 'glossary-definition', 'glossary_definition_shortcode' );
-add_shortcode( 'videopicker', 'videopicker_shortcode' );
-add_shortcode( 'ohm', 'ohm2_shortcode_handler' );
-add_shortcode( 'ohm2_question', 'ohm2_question_shortcode' );
-add_shortcode( 'choosedataset', 'choosedataset_shortcode' );
+add_shortcode( 'glossary-page', 'glossaryPageShortcode' );
+add_shortcode( 'glossary-term', 'glossaryTermShortcode' );
+add_shortcode( 'glossary-definition', 'glossaryDefinitionShortcode' );
+add_shortcode( 'videopicker', 'videopickerShortcodeHandler' );
+add_shortcode( 'ohm', 'ohmQuestionShortcodeHandler' );
+add_shortcode( 'ohm2_question', 'ohmQuestionShortcodeHandler' );
+add_shortcode( 'choosedataset', 'choosedatasetShortcodeHandler' );
 
 /**
  * Shortcode handler for [reveal-answer].
@@ -53,7 +53,7 @@ function hiddenAnswerShortCodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossary_page_shortcode( $atts = [], $content = null ) {
+function glossaryPageShortcode( $atts = [], $content = null ) {
 	return '<div class="lumen-glossary"><dl>' . do_shortcode( $content ) . '</dl></div>';
 }
 
@@ -65,7 +65,7 @@ function glossary_page_shortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossary_term_shortcode( $atts = [], $content = null ) {
+function glossaryTermShortcode( $atts = [], $content = null ) {
 	return '<dt>' . do_shortcode( $content ) . '</dt>';
 }
 
@@ -76,10 +76,9 @@ function glossary_term_shortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossary_definition_shortcode( $atts = [], $content = null ) {
+function glossaryDefinitionShortcode( $atts = [], $content = null ) {
 	return '<dd>' . do_shortcode( $content ) . '</dd>';
 }
-
 
 /**
  * Shortcode that displays a fallback message for excluded interactive video picker elements used by Lumen Learning
@@ -87,10 +86,9 @@ function glossary_definition_shortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function videopicker_shortcode( $atts = [], $content = null ) {
+function videopickerShortcodeHandler( $atts = [], $content = null ) {
 	return '<div class="textbox interactive-content">
-	<span class="interactive-content__icon"></span>
-	<p>An interactive video picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+	<p><span class="interactive-content__icon"></span>An interactive video picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
 	</div>';
 }
 
@@ -100,25 +98,24 @@ function videopicker_shortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function choosedataset_shortcode( $atts = [], $content = null ) {
+function choosedatasetShortcodeHandler( $atts = [], $content = null ) {
 	$header = '';
 	if ( $atts['title'] ) {
-		$header.= '<h3>' . $atts['title'] . '</h3>';
+		$header .= '<h3>' . $atts['title'] . '</h3>';
 	}
 	if ( $atts['label'] ) {
-		$header.= '<h4>' . $atts['label'] . '</h4>';
+		$header .= '<h4>' . $atts['label'] . '</h4>';
 	}
 	$options = '';
-	if ($atts['default']) {
-		$options.= '<option value="">'. $atts['default'] .'</option>';
+	if ( $atts['default'] ) {
+		$options .= '<option value="">' . $atts['default'] . '</option>';
 	}
 	$id = $atts['divid'] ? $atts['divid'] : 'tnh-choose-dataset';
 
-	return '<div id="' . $id .'" class="chooseDataset">
+	return '<div id="' . $id . '" class="chooseDataset">
             ' . $header . '
             <div class="textbox interactive-content">
-	<span class="interactive-content__icon"></span>
-	<p>An interactive dataset picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+	<p><span class="interactive-content__icon"></span>An interactive dataset picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
 	</div></div>';
 }
 
@@ -128,9 +125,8 @@ function choosedataset_shortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function ohm2_question_shortcode( $atts = [], $content = null ) {
+function ohmQuestionShortcodeHandler( $atts = [], $content = null ) {
 	return '<div class="textbox interactive-content">
-	<span class="interactive-content__icon"></span>
-	<p>An interactive online homework element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+	<p><span class="interactive-content__icon"></span>An interactive online homework element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
 	</div>';
 }
