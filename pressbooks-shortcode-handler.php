@@ -12,9 +12,9 @@ License: GPL 3.0
 
 add_shortcode( 'reveal-answer', 'revealAnswerShortCodeHandler' );
 add_shortcode( 'hidden-answer', 'hiddenAnswerShortCodeHandler' );
-add_shortcode( 'glossary-page', 'glossaryPageShortcode' );
-add_shortcode( 'glossary-term', 'glossaryTermShortcode' );
-add_shortcode( 'glossary-definition', 'glossaryDefinitionShortcode' );
+add_shortcode( 'glossary-page', 'glossaryPageShortcodeHandler' );
+add_shortcode( 'glossary-term', 'glossaryTermShortcodeHandler' );
+add_shortcode( 'glossary-definition', 'glossaryDefinitionShortcodeHandler' );
 add_shortcode( 'videopicker', 'videopickerShortcodeHandler' );
 add_shortcode( 'ohm', 'ohmQuestionShortcodeHandler' );
 add_shortcode( 'ohm2_question', 'ohmQuestionShortcodeHandler' );
@@ -53,7 +53,7 @@ function hiddenAnswerShortCodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryPageShortcode( $atts = [], $content = null ) {
+function glossaryPageShortcodeHandler( $atts = [], $content = null ) {
 	return '<div class="lumen-glossary"><dl>' . do_shortcode( $content ) . '</dl></div>';
 }
 
@@ -65,7 +65,7 @@ function glossaryPageShortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryTermShortcode( $atts = [], $content = null ) {
+function glossaryTermShortcodeHandler( $atts = [], $content = null ) {
 	return '<dt>' . do_shortcode( $content ) . '</dt>';
 }
 
@@ -76,7 +76,7 @@ function glossaryTermShortcode( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryDefinitionShortcode( $atts = [], $content = null ) {
+function glossaryDefinitionShortcodeHandler( $atts = [], $content = null ) {
 	return '<dd>' . do_shortcode( $content ) . '</dd>';
 }
 
