@@ -9,3 +9,11 @@ Adds support for the following shortcodes:
 [glossary-term]
 [glossary-definition]
 ```
+
+Prints graceful fallback messages for four additional shortcodes used by Lumen Learning but not supported by core Pressbooks:
+```
+[videopicker]
+[ohm]
+[ohm2_question]
+[choosedataset]
+```
