@@ -23,6 +23,10 @@ add_shortcode( 'ohm', 'ohmQuestionShortcodeHandler' );
 add_shortcode( 'ohm2_question', 'ohmQuestionShortcodeHandler' );
 add_shortcode( 'choosedataset', 'choosedatasetShortcodeHandler' );
 
+add_action( 'init', function() {
+	load_plugin_textdomain( 'pressbooks-shortcode-handler', false, 'pressbooks-shortcode-handler/languages' );
+} );
+
 /**
  * Shortcode handler for [reveal-answer].
  * Ex: [reveal-answer q="153"]Show Answer[/reveal-answer].
