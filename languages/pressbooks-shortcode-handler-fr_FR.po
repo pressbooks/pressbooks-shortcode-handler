@@ -3,16 +3,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pressbooks Shortcode Handler 1.2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-shortcode-handler/issues\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-network-"
+"analytics/issues\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-05-19T09:52:12+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-05-19T09:52:12+00:00\n"
 "X-Generator: WP-CLI 2.13.0-alpha\n"
 "X-Domain: pressbooks-shortcode-handler\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin
 #: pressbooks-shortcode-handler.php
@@ -26,7 +29,8 @@ msgstr ""
 
 #. Description of the plugin
 #: pressbooks-shortcode-handler.php
-msgid "Plugin for Pressbooks to handle additional shortcodes used by Lumen Learning."
+msgid ""
+"Plugin for Pressbooks to handle additional shortcodes used by Lumen Learning."
 msgstr ""
 
 #. Author of the plugin
