@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pressbooks Shortcode Handler 1.2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-network-analytics/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-shortcode-handler/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
