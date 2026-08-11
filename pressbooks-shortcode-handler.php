@@ -13,19 +13,19 @@ Text Domain: pressbooks-shortcode-handler
 License: GPL v3 or later
 */
 
-add_shortcode( 'reveal-answer', 'revealAnswerShortCodeHandler' );
-add_shortcode( 'hidden-answer', 'hiddenAnswerShortCodeHandler' );
-add_shortcode( 'glossary-page', 'glossaryPageShortcodeHandler' );
-add_shortcode( 'glossary-term', 'glossaryTermShortcodeHandler' );
-add_shortcode( 'glossary-definition', 'glossaryDefinitionShortcodeHandler' );
-add_shortcode( 'videopicker', 'videopickerShortcodeHandler' );
-add_shortcode( 'ohm', 'ohmQuestionShortcodeHandler' );
-add_shortcode( 'ohm2_question', 'ohmQuestionShortcodeHandler' );
-add_shortcode( 'choosedataset', 'choosedatasetShortcodeHandler' );
+add_shortcode('reveal-answer', 'revealAnswerShortCodeHandler');
+add_shortcode('hidden-answer', 'hiddenAnswerShortCodeHandler');
+add_shortcode('glossary-page', 'glossaryPageShortcodeHandler');
+add_shortcode('glossary-term', 'glossaryTermShortcodeHandler');
+add_shortcode('glossary-definition', 'glossaryDefinitionShortcodeHandler');
+add_shortcode('videopicker', 'videopickerShortcodeHandler');
+add_shortcode('ohm', 'ohmQuestionShortcodeHandler');
+add_shortcode('ohm2_question', 'ohmQuestionShortcodeHandler');
+add_shortcode('choosedataset', 'choosedatasetShortcodeHandler');
 
-add_action( 'init', function() {
-	load_plugin_textdomain( 'pressbooks-shortcode-handler', false, 'pressbooks-shortcode-handler/languages' );
-} );
+add_action('init', function () {
+    load_plugin_textdomain('pressbooks-shortcode-handler', false, 'pressbooks-shortcode-handler/languages');
+});
 
 /**
  * Shortcode handler for [reveal-answer].
@@ -35,8 +35,9 @@ add_action( 'init', function() {
  *
  * @return string
  */
-function revealAnswerShortCodeHandler( $atts = [], $content = null ) {
-	return '<details><summary>' . do_shortcode( $content ) . '</summary>';
+function revealAnswerShortCodeHandler($atts = [], $content = null)
+{
+    return '<details><summary>' . do_shortcode($content) . '</summary>';
 }
 
 /**
@@ -48,8 +49,9 @@ function revealAnswerShortCodeHandler( $atts = [], $content = null ) {
  * @return string
  */
 
-function hiddenAnswerShortCodeHandler( $atts = [], $content = null ) {
-	return do_shortcode( $content ) . '</details>';
+function hiddenAnswerShortCodeHandler($atts = [], $content = null)
+{
+    return do_shortcode($content) . '</details>';
 }
 
 /**
@@ -60,8 +62,9 @@ function hiddenAnswerShortCodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryPageShortcodeHandler( $atts = [], $content = null ) {
-	return '<div class="lumen-glossary"><dl>' . do_shortcode( $content ) . '</dl></div>';
+function glossaryPageShortcodeHandler($atts = [], $content = null)
+{
+    return '<div class="lumen-glossary"><dl>' . do_shortcode($content) . '</dl></div>';
 }
 
 /**
@@ -72,8 +75,9 @@ function glossaryPageShortcodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryTermShortcodeHandler( $atts = [], $content = null ) {
-	return '<dt>' . do_shortcode( $content ) . '</dt>';
+function glossaryTermShortcodeHandler($atts = [], $content = null)
+{
+    return '<dt>' . do_shortcode($content) . '</dt>';
 }
 
 /**
@@ -83,8 +87,9 @@ function glossaryTermShortcodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function glossaryDefinitionShortcodeHandler( $atts = [], $content = null ) {
-	return '<dd>' . do_shortcode( $content ) . '</dd>';
+function glossaryDefinitionShortcodeHandler($atts = [], $content = null)
+{
+    return '<dd>' . do_shortcode($content) . '</dd>';
 }
 
 /**
@@ -93,8 +98,9 @@ function glossaryDefinitionShortcodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function videopickerShortcodeHandler( $atts = [], $content = null ) {
-	return '<div class="textbox interactive-content">
+function videopickerShortcodeHandler($atts = [], $content = null)
+{
+    return '<div class="textbox interactive-content">
 	<p><span class="interactive-content__icon"></span>An interactive video picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
 	</div>';
 }
@@ -105,21 +111,22 @@ function videopickerShortcodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function choosedatasetShortcodeHandler( $atts = [], $content = null ) {
-	$header = '';
-	if ( $atts['title'] ) {
-		$header .= '<h3>' . $atts['title'] . '</h3>';
-	}
-	if ( $atts['label'] ) {
-		$header .= '<h4>' . $atts['label'] . '</h4>';
-	}
-	$options = '';
-	if ( $atts['default'] ) {
-		$options .= '<option value="">' . $atts['default'] . '</option>';
-	}
-	$id = $atts['divid'] ? $atts['divid'] : 'tnh-choose-dataset';
+function choosedatasetShortcodeHandler($atts = [], $content = null)
+{
+    $header = '';
+    if ($atts['title']) {
+        $header .= '<h3>' . $atts['title'] . '</h3>';
+    }
+    if ($atts['label']) {
+        $header .= '<h4>' . $atts['label'] . '</h4>';
+    }
+    $options = '';
+    if ($atts['default']) {
+        $options .= '<option value="">' . $atts['default'] . '</option>';
+    }
+    $id = $atts['divid'] ? $atts['divid'] : 'tnh-choose-dataset';
 
-	return '<div id="' . $id . '" class="chooseDataset">
+    return '<div id="' . $id . '" class="chooseDataset">
             ' . $header . '
             <div class="textbox interactive-content">
 	<p><span class="interactive-content__icon"></span>An interactive dataset picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
@@ -132,8 +139,9 @@ function choosedatasetShortcodeHandler( $atts = [], $content = null ) {
  *
  * @return string
  */
-function ohmQuestionShortcodeHandler( $atts = [], $content = null ) {
-	return '<div class="textbox interactive-content">
+function ohmQuestionShortcodeHandler($atts = [], $content = null)
+{
+    return '<div class="textbox interactive-content">
 	<p><span class="interactive-content__icon"></span>An interactive online homework element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
 	</div>';
 }
