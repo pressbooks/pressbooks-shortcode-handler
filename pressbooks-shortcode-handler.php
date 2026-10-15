@@ -101,7 +101,9 @@ function glossaryDefinitionShortcodeHandler($atts = [], $content = null)
 function videopickerShortcodeHandler($atts = [], $content = null)
 {
     return '<div class="textbox interactive-content">
-	<p><span class="interactive-content__icon"></span>An interactive video picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+    <p><span class="interactive-content__icon"></span>'
+    . esc_html__('An interactive video picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.', 'pressbooks-shortcode-handler')
+    . '</p>
 	</div>';
 }
 
@@ -129,7 +131,9 @@ function choosedatasetShortcodeHandler($atts = [], $content = null)
     return '<div id="' . $id . '" class="chooseDataset">
             ' . $header . '
             <div class="textbox interactive-content">
-	<p><span class="interactive-content__icon"></span>An interactive dataset picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+    <p><span class="interactive-content__icon"></span>'
+    . esc_html__('An interactive dataset picker element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.', 'pressbooks-shortcode-handler')
+    . '</p>
 	</div></div>';
 }
 
@@ -142,6 +146,8 @@ function choosedatasetShortcodeHandler($atts = [], $content = null)
 function ohmQuestionShortcodeHandler($atts = [], $content = null)
 {
     return '<div class="textbox interactive-content">
-	<p><span class="interactive-content__icon"></span>An interactive online homework element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.</p>
+    <p><span class="interactive-content__icon"></span>'
+    . esc_html__('An interactive online homework element has been excluded from the printed version of the text. To see the interactive element that was excluded, please visit the courseware online.', 'pressbooks-shortcode-handler')
+    . '</p>
 	</div>';
 }
