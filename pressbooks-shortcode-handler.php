@@ -5,7 +5,7 @@ Plugin Name: Pressbooks Shortcode Handler
 Plugin URI: https://github.com/pressbooks/pressbooks-shortcode-handler
 Description: Plugin for Pressbooks to handle additional shortcodes used by Lumen Learning.
 x-release-please-start-version
-Version: 1.2.0
+Version: 1.3.0
 x-release-please-end
 Requires at least: 6.5
 Requires Plugins: pressbooks
