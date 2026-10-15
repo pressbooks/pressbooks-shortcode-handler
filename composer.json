@@ -13,5 +13,36 @@
   "support": {
     "email": "code@pressbooks.com",
     "issues": "https://github.com/pressbooks/pressbooks-shortcode-handler/issues"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.3"
+    },
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "composer/installers": "^2"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.10",
+    "yoast/phpunit-polyfills": "^1.1"
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit --configuration phpunit.xml"
+    ],
+    "test-coverage": [
+      "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml"
+    ],
+    "fix": [
+      "vendor/bin/pint"
+    ],
+    "standards": [
+      "vendor/bin/pint --test"
+    ]
   }
 }

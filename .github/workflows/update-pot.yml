@@ -1,0 +1,19 @@
+name: Update .pot file 🌐
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - "**/*.php"
+      - "**/*.js"
+  workflow_dispatch:
+
+jobs:
+  update-pot-file:
+    uses: pressbooks/reusable-workflows/.github/workflows/update-pot.yml@main
+    secrets: inherit
+    with:
+      domain: 'pressbooks-shortcode-handler'
+      slug: 'pressbooks-shortcode-handler'
+      package_name: 'Pressbooks Shortcode Handler'
+      headers: '{"Report-Msgid-Bugs-To": "https://github.com/pressbooks/pressbooks-shortcode-handler/issues"}'

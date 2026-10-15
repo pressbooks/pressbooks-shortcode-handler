@@ -4,7 +4,9 @@ Contributors: steelwagstaff
 Tags: pressbooks, plugins
 Requires at least: 6.5
 Tested up to: 6.5
+<!-- x-release-please-start-version -->
 Stable tag: 1.2.0
+<!-- x-release-please-end -->
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
